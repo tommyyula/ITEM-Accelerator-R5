@@ -567,9 +567,9 @@
 <p><strong>本节结论：</strong>哪个 ISS 页面适合快速验证？能否取得必要代码和本地环境？生成、审核、发布及后续维护分别由谁负责？</p>
 <hr/>
 <h4 id="md-D1-2-3">D1.2.3 UNIS Rate &amp; Quote｜60 分钟</h4>
-<p><strong>统一业务知识与系统数据之间的差距，转型 AI Native。</strong>ITEM × COO AI Team × ISS Biz Team。本节依次展开：开场视频、概念对齐、业务痛点、解决思路、Object Database、Ontology Studio、Agent Factory｜ItemGPT、方案复盘、商业价值、职责边界和验收基线。</p>
+<p><strong>统一业务知识与系统数据之间的差距，转型 AI Native。</strong>ITEM × COO AI Team × ISS Biz Team。本节依次展开：开场视频、概念对齐、业务痛点、解决思路、Object Database、Ontology Studio、Agent Factory｜ItemGPT、方案复盘、商业价值、与 ISS 对齐。</p>
 <h5 id="md-D1-2-3-1">D1.2.3.1 开场视频：先看一段演示</h5>
-<p>演示视频：<a href="https://youtu.be/TBX9CNtFQ6k">https://youtu.be/TBX9CNtFQ6k</a>。会中版本页嵌入 YouTube 播放器；无法播放时可点击链接在 YouTube 打开。</p>
+<p>会中版本页嵌入本地演示视频 <code>media/rate-quote/d123.mp4</code>（约 3 分 10 秒），不是外链。同一文件已放入 <code>unis-rate-quote-r5-day.pptx</code> 第 2 页。</p>
 <h5 id="md-D1-2-3-2">D1.2.3.2 概念对齐：BNP &amp; Rate Sheet</h5>
 <p>BNP 是开票与付款业务域；Rate Sheet 是其中费率如何定、条件如何适用的子场景。</p>
 <ul>
@@ -578,10 +578,11 @@
 </ul>
 <p><strong>要点：</strong>BNP = Bill and Pay · 开票与付款；Rate Sheet = BNP 子场景 · 费率与条件。</p>
 <h5 id="md-D1-2-3-3">D1.2.3.3 业务痛点：Rate Sheet 当前业务痛点</h5>
-<p>开发滞后于业务；知识随人流失。</p>
+<p>系统节奏滞后 · 知识随人流失 · 呈现与学习门槛高。</p>
 <ul>
-<li><strong>系统跟不上变化</strong>：系统开发跟不上；业务增长与变化；交付节奏难同步。</li>
+<li><strong>系统跟不上变化</strong>：系统开发跟不上业务增长与变化；交付节奏难同步。</li>
 <li><strong>知识留在人脑</strong>：规则与例外口口相传；业务知识难进系统；人员变动则流失。</li>
+<li><strong>呈现弱 · 开发重 · 门槛高</strong>：页面呈现方式简陋；IT 开发工作量较大；系统使用人员学习门槛高。</li>
 </ul>
 <h5 id="md-D1-2-3-4">D1.2.3.4 解决思路：从数据语义到动态应用</h5>
 <p><strong>Object Database → Ontology Studio → Agent Factory ∥ ItemGPT → 动态生成应用。</strong></p>
@@ -592,12 +593,13 @@
 <li><strong>动态生成站点页面</strong>：基于业务本体生成应用站点。</li>
 </ul>
 <h5 id="md-D1-2-3-5">D1.2.3.5 Object Database｜数据语义</h5>
-<p>将原始异构数据统一拉齐语义。</p>
+<p>由跨角色协同，将原始异构数据构建成可引用的数据语义。</p>
 <ul>
 <li><strong>原始表与字段</strong>：数据散落在表与字段中；尚未形成统一业务含义；难以被业务与 AI 直接引用。</li>
 <li><strong>可引用的数据语义</strong>：对表、字段、关系做语义定义；供本体与应用引用；原始真实数据 → 统一语义。</li>
 </ul>
-<p><strong>要点：</strong>原始散落 → 语义定义 → 供本体与应用引用。</p>
+<p><strong>协同构建：</strong>FDE + 业务专家 + 技术专家 → 原始异构数据构建成数据语义。</p>
+<p><strong>要点：</strong>FDE + 业务专家 + 技术专家协同完成语义化，供本体与应用引用。</p>
 <h5 id="md-D1-2-3-6">D1.2.3.6 Ontology Studio｜业务本体</h5>
 <p>接入 Object Database 的数据语义，由业务专家构建业务本体。</p>
 <ol>
@@ -617,9 +619,9 @@
 <p>从「人盲目调价、系统只记录」到「系统辅助人定价 / 报价」。</p>
 <p>链路：Object Database（数据语义）→ Ontology Studio（业务本体）→ Agent Factory ∥ ItemGPT（能力 ∥ 入口）→ Dynamic Apps（动态生成应用）。</p>
 <ul>
-<li><strong>价值转向</strong>：人盲目调价、系统只记录 → 系统辅助人定价 / 报价。</li>
-<li><strong>同一本体</strong>：分析页与业务表单共用同一本体。</li>
-<li><strong>可回溯 · 可演进</strong>：四站链路可回溯、可演进。</li>
+<li><strong>辅助决策能力弱</strong> → 现在动态生成业务系统，多客户比较、趋势分析一步到位。</li>
+<li><strong>IT 开发成本高</strong> → 现在按小时交付，开发成本大幅降低。</li>
+<li><strong>业务人员被动适应系统</strong> → 现在业务人员描述需求即可，系统按需生成，主动权回到业务手中。</li>
 </ul>
 <h5 id="md-D1-2-3-9">D1.2.3.9 Rate Sheet 转型 AI Native 商业价值</h5>
 <p>UNIS 建立这套系统，不只是为了更快地生成 Quote，而是为了让每一个报价都有数据依据、价格标准和可评估的商业价值。</p>
@@ -633,20 +635,14 @@
 <li><strong>提高业务可扩展性</strong>：支持未来更多服务类型、客户及 Facility 的标准化报价管理。</li>
 </ol>
 <p><strong>最终价值：</strong>提高报价效率、优化收入与利润、统一定价标准，并实现从价格分析、智能报价到 BNP Billing 的完整业务闭环。</p>
-<h5 id="md-D1-2-3-10">D1.2.3.10 合作落地：职责边界和验收基线</h5>
-<p><strong>建议职责边界。</strong></p>
-<ul>
-<li><strong>ISS Biz (team)</strong>：场景、规则、数据定义、专家确认、验收与价值验证。</li>
-<li><strong>ITEM</strong>：与 COO AI Team/Hollis 紧密共同开发；实现页面、表单、测试和交付。</li>
-<li><strong>COO AI Team / DT</strong>：已有成果与方法支撑；数据、代码、软件、接口等按需支撑。</li>
-</ul>
-<p><strong>验收基线。</strong></p>
-<ul>
-<li>分母：确定样本集合与业务边界。</li>
-<li>周期：约定运营周期。</li>
-<li>错误级别：语义、规则/计算、权限/流程、数据质量、结果记录。</li>
-</ul>
-<p><strong>讨论焦点：</strong>谁是业务 Owner、专家审核人、验收人和运营维护人？首轮分母与周期是什么？</p>
+<h5 id="md-D1-2-3-10">D1.2.3.10 合作落地：与 ISS 对齐</h5>
+<p>对照 Rate Sheet 链路，讨论 ISS 是否存在类似场景。</p>
+<ol>
+<li><strong>数据形态</strong>：数据相对完善，还是结构复杂、分散？</li>
+<li><strong>IT 依赖</strong>：页面与流程是否依赖大量 IT 开发？</li>
+<li><strong>Agent 与分析</strong>：是否需要 Agent 拓展能力，并支撑更丰富的分析？</li>
+</ol>
+<p><strong>研讨邀请：</strong>欢迎对照 Rate Sheet 链路，分享现状与优先级。</p>
 <hr/>
 <h4 id="md-D1-2-4">D1.2.4 ISS BO｜40 分钟</h4>
 <p><strong>预录视频留位：c04。</strong> 素材链接/文件、时长、录制日期、真实/脱敏/模拟状态及授权负责人由Tom补充；部署播放器配置对应 <code>assets/site-config.js</code> 的 <code>c04</code>。当前不引用未提供的视频。演示应对应本例正常、异常/缺失信息、人工接管、状态回写与最终结果。</p>
